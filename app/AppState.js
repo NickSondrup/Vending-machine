@@ -1,10 +1,10 @@
-import Value from "./Models/Value.js"
+import Snack from "./Models/Snack.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  /** @type {Value[]} */
-  values = []
+  snacks = [new Snack('Mountain Sprite', 2.50), new Snack('Root Dew', 5.75), new Snack('Chocolate', 4.00)]
+  cart =[]
 }
 
 export const ProxyState = new Proxy(new AppState(), {
